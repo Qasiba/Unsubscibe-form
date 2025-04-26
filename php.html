@@ -1,0 +1,9 @@
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = $_POST['email'];
+        $reason = $_POST['reason'];
+
+        // Send email or store the data
+        mail("your-email@example.com", "Unsubscribe Request", "Email: $email\nReason: $reason");
+    }
+?>
